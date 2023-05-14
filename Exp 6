@@ -1,0 +1,57 @@
+1 row in set (0.00 sec)
+
+mysql> select course_no,avg(marks) from reg where course_no='c002';
++-----------+------------+
+| course_no | avg(marks) |
++-----------+------------+
+| c002      |    74.7500 |
++-----------+------------+
+1 row in set (0.02 sec)
+
+mysql> select course_no,avg(marks) from reg where course_no='c003';
++-----------+------------+
+| course_no | avg(marks) |
++-----------+------------+
+| c003      |    67.0000 |
++-----------+------------+
+1 row in set (0.00 sec)
+
+mysql> select sum(marks) from reg;
++------------+
+| sum(marks) |
++------------+
+|        699 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select course_no,count(course_no) from reg where course_no='c001';
++-----------+------------------+
+| course_no | count(course_no) |
++-----------+------------------+
+| c001      |                3 |
++-----------+------------------+
+1 row in set (0.02 sec)
+
+mysql> select course_no,count(course_no) from reg where course_no='c002';
++-----------+------------------+
+| course_no | count(course_no) |
++-----------+------------------+
+| c002      |                4 |
++-----------+------------------+
+1 row in set (0.00 sec)
+
+mysql> select course_no,count(course_no) from reg where course_no='c003';
++-----------+------------------+
+| course_no | count(course_no) |
++-----------+------------------+
+| c003      |                1 |
++-----------+------------------+
+1 row in set (0.00 sec)
+
+mysql> select count(course_no) from reg;
++------------------+
+| count(course_no) |
++------------------+
+|               11 |
++------------------+
+1 row in set (0.00 sec)
